@@ -8,6 +8,9 @@
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 import datetime
 
+# 设置并发数，默认32
+CONCURRENT_REQUESTS = 100
+
 BOT_NAME = 'testSpider'
 
 SPIDER_MODULES = ['testSpider.spiders']
@@ -21,11 +24,13 @@ NEWSPIDER_MODULE = 'testSpider.spiders'
 ROBOTSTXT_OBEY = True
 
 
-# 设置日志输出到文件里面
-LOG_LEVEL = 'DEBUG'
-to_day = datetime.datetime.now()
-log_file_path = 'log/scrapy_{}_{}_{}.log'.format(to_day.year, to_day.month, to_day.day)
-LOG_FILE = log_file_path
+# 设置较低等级的log
+LOG_LEVEL = 'INFO'
+
+# LOG_LEVEL = 'DEBUG'
+# to_day = datetime.datetime.now()
+# log_file_path = 'log/scrapy_{}_{}_{}.log'.format(to_day.year, to_day.month, to_day.day)
+# LOG_FILE = log_file_path
 
 
 

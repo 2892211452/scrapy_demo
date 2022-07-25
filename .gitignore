@@ -3,3 +3,4 @@ log/*
 .idea
 
 Config/para.json
+*.pyc
