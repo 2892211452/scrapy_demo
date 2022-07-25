@@ -1,0 +1,5 @@
+log/*
+!log/readme.md
+.idea
+
+Config/para.json
