@@ -16,3 +16,7 @@ scrapy crawl spider_demo
  scrapy genspider newspider test.com   
 ```
 
+
+# 中间件------异常处理文件
+对应的是项目中的middlewares.py文件
+

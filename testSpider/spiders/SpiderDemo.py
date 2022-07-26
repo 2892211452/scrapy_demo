@@ -23,7 +23,7 @@ class SpiderDemo(scrapy.Spider):
 
     # 对爬取的结果进行解析的函数，回调函数
     def parse(self, response):
-        print("para meta is ",response.meta)
+        print_green("para meta is ",response.meta)
         page = response.url.split("/")[-2]
         filename = f'github-{page}.html'
         with open(filename, 'wb') as f:
@@ -38,4 +38,4 @@ class SpiderDemo(scrapy.Spider):
 
     # 二级解析函数
     def second_parse(self, response):
-        print("second page",response.url)
+        print_green("second page",response.url)
