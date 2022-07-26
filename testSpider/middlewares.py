@@ -32,6 +32,7 @@ class ProcessAllExceptionMiddleware(object):
             print_red("异常了 状态码是{}， url是 {}".format(response.status, response.url) )
             # 可以自己编造一个response
             # response = HtmlResponse(url='')
+            raise Exception("403 太多了") # 通过抛出异常可以直接暂停脚本
             return response
         # 其他状态码不处理
         return response

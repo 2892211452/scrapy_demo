@@ -19,4 +19,4 @@ scrapy crawl spider_demo
 
 # 中间件------异常处理文件
 对应的是项目中的middlewares.py文件
-
+然后在对应的爬虫里面配置好就行

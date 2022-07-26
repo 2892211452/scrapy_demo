@@ -13,10 +13,15 @@ class NewspiderSpider(scrapy.Spider):
     def start_requests(self):
         start_urls = [
             'https://api.github.com/repos/MeTitus/WServiceHost/commits?page=1&per_page=100',
-            "https://www.baidu.com"
-        ]
+            "https://www.baidu.com",
+            "https://www.baidu.com",
+            "https://www.baidu.com",
+            "https://www.baidu.com",
 
-        yield scrapy.Request(url=start_urls[0], callback=self.parse)
+        ]
+        for url in start_urls:
+
+            yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
 
